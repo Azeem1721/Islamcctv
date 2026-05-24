@@ -1,0 +1,1643 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #1a4f63; /* Muted Deep Teal */
+    --primary-light: #2c728d;
+    --accent-color: #0d9488;  /* Cyan/Teal Accent */
+    --gradient-accent: linear-gradient(135deg, #0d9488 0%, #06b6d4 100%);
+    --bg-base: #f7f9fa;       /* Premium Soft Slate/Platinum Background */
+    --bg-card: #ffffff;       /* Pure White for Cards */
+    --text-main: #1e293b;     /* Dark Slate Text */
+    --text-muted: #64748b;    /* Cool Gray Muted Text */
+    --border-color: #e6ecf0;  /* Clean Seamless Border Accent */
+    --whatsapp-color: #25d366; /* Official WhatsApp Green */
+    --star-color: #fbbf24;    /* Amber/Gold for Ratings */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-base);
+    color: var(--text-main);
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Utility Layout Wrapper */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Premium Soft Elevation Effect */
+.premium-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(148, 163, 184, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.premium-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(148, 163, 184, 0.12);
+}
+
+/* Header / Navbar (PC Height Maintained) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--border-color);
+    background: rgba(247, 249, 250, 0.85);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.dummy-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* extra image cut ho jayegi */
+}
+
+.dummy-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* image properly fit hogi */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+}
+
+nav {
+    background: #ffffff;
+    padding: 8px 32px;
+    border-radius: 30px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.01);
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+nav a.active, nav a:hover {
+    color: var(--primary-color);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Top Social Mini Links Layout */
+.header-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.header-socials a {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: #ffffff;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.header-socials a:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.whatsapp-btn {
+    background: var(--whatsapp-color);
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
+}
+
+.whatsapp-btn:hover {
+    background: #20ba56;
+    transform: scale(1.02);
+}
+
+/* SPA Layout Toggling classes */
+.page-view {
+    display: none;
+}
+.page-view.active-view {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+}
+
+/* Soft Geometric Dot Pattern */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 450px;
+    height: 450px;
+    background-image: radial-gradient(var(--border-color) 2px, transparent 2px);
+    background-size: 20px 20px;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.hero-content {
+    padding: 45px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+}
+
+.hero-content h1 {
+    font-size: 46px;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero-content h1 span {
+    color: var(--accent-color);
+}
+
+/* Premium Typewriter Style Structure */
+.typewriter-desc {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    min-height: 52px;
+    display: inline-block;
+}
+
+/* Typing cursor style */
+.typewriter-cursor {
+    display: inline-block;
+    width: 2px;
+    background-color: var(--accent-color);
+    margin-left: 2px;
+    animation: blink 0.75s step-end infinite;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    from, to { background-color: transparent }
+    50% { background-color: var(--accent-color); }
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.cta-btn:hover {
+    background: #0f766e;
+    transform: scale(1.02);
+}
+
+/* 4-Image Grid Layout System */
+.hero-images-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    position: relative;
+}
+
+.hero-images-grid .img-panel {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(148, 163, 184, 0.08);
+    height: 210px;
+    transition: transform 0.4s ease;
+}
+
+.hero-images-grid .img-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlapping & Staggered Shifts */
+.panel-1 { transform: translateY(-15px) translateX(10px); }
+.panel-2 { transform: translateY(15px) translateX(-5px); }
+.panel-3 { transform: translateY(-25px) translateX(-10px); }
+.panel-4 { transform: translateY(5px) translateX(5px); }
+
+.hero-images-grid:hover .img-panel {
+    transform: translateY(0) translateX(0);
+}
+
+/* Premium Section Heading Style System with Transition Base */
+.section-header-wrapper {
+    margin-bottom: 50px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.7s cubic-bezier(0.215, 0.610, 0.355, 1), transform 0.7s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+/* Class added by JS when visible on scroll */
+.section-header-wrapper.header-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-tagline {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+    display: block;
+}
+
+section h2.premium-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+    display: inline-block;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+section h2.premium-title span {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title-accent-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.title-accent-line::before {
+    content: '';
+    width: 0px;
+    height: 4px;
+    background: var(--gradient-accent);
+    border-radius: 3px;
+    transition: width 0.8s cubic-bezier(0.215, 0.610, 0.355, 1) 0.3s;
+}
+
+.section-header-wrapper.header-revealed .title-accent-line::before {
+    width: 45px;
+}
+
+.title-accent-line::after {
+    content: '';
+    width: 6px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.5s ease 0.8s;
+}
+
+.section-header-wrapper.header-revealed .title-accent-line::after {
+    opacity: 1;
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 0;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    padding: 50px;
+}
+
+.about-text p {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+/* Live Statistics Layout */
+.stats {
+    display: flex;
+    gap: 60px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 30px;
+}
+
+.stat-box h3 {
+    font-size: 36px;
+    color: var(--primary-color);
+    font-weight: 700;
+    display: inline-block;
+}
+
+.stat-box p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Services Section Structured Grid */
+.services-section {
+    padding: 80px 0 40px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* 3-Image Only Premium Cards Layout */
+.service-img-card {
+    height: 280px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #e2e8f0;
+    border: 1px solid var(--border-color);
+}
+
+.service-img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.service-img-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Center Headings and Text Info Layout Cards */
+.service-info-card {
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.service-info-card .icon-container {
+    width: 60px;
+    height: 60px;
+    background: rgba(13, 148, 136, 0.1);
+    color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.service-info-card h3 {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.service-info-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Feedback Section Styling */
+.feedback-section {
+    padding: 80px 0 120px 0;
+}
+
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feedback-card {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stars {
+    color: var(--star-color);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.feedback-text {
+    color: var(--text-main);
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+.client-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.client-meta h4 {
+    font-size: 14px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.client-meta p {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* Exclusive Deals Section Styling */
+.deals-section {
+    padding: 60px 0 120px 0;
+}
+
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.deal-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(148, 163, 184, 0.04);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.deal-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(148, 163, 184, 0.12);
+}
+
+.deal-img-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #e2e8f0;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.deal-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+
+
+
+
+
+
+
+
+
+
+.deal-details {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.deal-tag {
+    align-self: flex-start;
+    background: rgba(13, 148, 136, 0.1);
+    color: var(--accent-color);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.deal-details h3 {
+    font-size: 19px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.deal-details p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.deal-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+.deal-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.deal-action-wa {
+    font-size: 13px;
+    color: var(--whatsapp-color);
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: rgba(37, 211, 102, 0.1);
+    transition: background 0.3s, color 0.3s;
+}
+
+.deal-action-wa:hover {
+    background: var(--whatsapp-color);
+    color: #ffffff;
+}
+
+/* FOOTER SYSTEM */
+footer {
+    background: var(--primary-color);
+    color: #ffffff;
+    padding: 70px 0 30px 0;
+    margin-top: 60px;
+    border-radius: 24px 24px 0 0;
+    font-size: 14px;
+}
+.footer-logo{
+    margin-top: -40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.footer-brand p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: -30px 0px 50px 0px;
+    line-height: 1.6;
+    
+    
+}
+
+.footer-col h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 22px;
+    color: #ffffff;
+    position: relative;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 25px;
+    height: 2px;
+    background: var(--accent-color);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-links a:hover {
+    color: #06b6d4;
+    padding-left: 6px;
+}
+
+.footer-meta-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-meta-item i {
+    color: var(--accent-color);
+    margin-top: 4px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.footer-socials a {
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+    background: var(--gradient-accent);
+    border-color: transparent;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+}
+
+/* ================= RESPONSIVE BREAKPOINTS (UPDATED HEADER HEIGHT) ================= */
+@media (max-width: 992px) {
+    .hero, .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .services-grid, .deals-grid, .feedback-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Fixed: Mobile compact header structure with zero extra hanging height */
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 0; /* Compact vertical spacing */
+        background: var(--bg-base);
+    }
+    .dummy-logo{
+         margin-top: -20px;
+    }
+    .logo{
+         margin-top: -25px;
+    }
+    nav {
+        width: auto; /* Width auto to prevent stretching */
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        padding: 6px 20px; /* Reduced internal layout fat */
+         margin-top: -30px;
+    }
+    nav a {
+        margin: 0;
+        font-size: 14px;
+        padding: 3px 30px;
+       
+    }
+    .header-actions {
+        width: 100%;
+        flex-direction: row; /* Keep elements side by side to save vertical height */
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-top: 2px;
+    }
+    .whatsapp-btn {
+        padding: 6px 14px; /* Scaled down padding button */
+        font-size: 12px;
+    }
+    .header-socials a {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .hero-content h1 {
+        font-size: 34px;
+    }
+    .services-grid, .deals-grid, .feedback-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-images-grid .img-panel {
+        height: 160px;
+    }
+    .panel-1, .panel-2, .panel-3, .panel-4 {
+        transform: none;
+    }
+    .service-img-card {
+        height: 220px;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .hero-content h1{
+        font-size: 23px;
+    }
+    .typewriter-desc{
+        /* font-size: la; */
+    }
+    .about-text{
+        
+    }
+
+
+
+
+
+
+}
+
+
+/* ================= COLORFUL SOCIAL ICONS SYSTEM ================= */
+
+/* Brand Color Variables */
+:root {
+    --fb-color: #1877F2;
+    --insta-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    --tiktok-color: #010101;
+    --tiktok-cyan: #00f2fe;
+    --tiktok-magenta: #fe0979;
+}
+
+/* --- 1. Header Social Icons --- */
+.header-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.header-socials a {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Header Specific Brand Colors (Normal State) */
+.header-socials a .fa-facebook-f { color: var(--fb-color); }
+.header-socials a .fa-tiktok { color: var(--tiktok-color); }
+
+/* Instagram Gradient Text Trick */
+.header-socials a .fa-instagram {
+    background: var(--insta-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Header Hover Dynamic Pop Effects */
+.header-socials a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.header-socials a.fb-icon:hover {
+    background: var(--fb-color);
+    border-color: var(--fb-color);
+}
+.header-socials a.fb-icon:hover i {
+    color: #ffffff;
+}
+
+.header-socials a.insta-icon:hover {
+    background: var(--insta-gradient);
+    border-color: transparent;
+}
+.header-socials a.insta-icon:hover i {
+    -webkit-text-fill-color: #ffffff;
+}
+
+/* TikTok Premium Glow Effect on Hover */
+.header-socials a.tiktok-icon:hover {
+    background: var(--tiktok-color);
+    border-color: var(--tiktok-color);
+    box-shadow: -2px -2px 0 var(--tiktok-cyan), 2px 2px 0 var(--tiktok-magenta);
+}
+.header-socials a.tiktok-icon:hover i {
+    color: #ffffff;
+}
+
+
+/* --- 2. Footer Social Icons --- */
+.footer-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.footer-socials a {
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Footer Default States */
+.footer-socials a.fb-icon i { color: #ffffff; }
+.footer-socials a.insta-icon i { color: #ffffff; }
+.footer-socials a.tiktok-icon i { color: #ffffff; }
+
+/* Footer Hover State Transitions */
+.footer-socials a:hover {
+    transform: translateY(-4px);
+    border-color: transparent;
+}
+
+.footer-socials a.fb-icon:hover {
+    background: var(--fb-color);
+    box-shadow: 0 4px 14px rgba(24, 119, 242, 0.4);
+}
+
+.footer-socials a.insta-icon:hover {
+    background: var(--insta-gradient);
+    box-shadow: 0 4px 14px rgba(226, 104, 60, 0.4);
+}
+
+.footer-socials a.tiktok-icon:hover {
+    background: var(--tiktok-color);
+    box-shadow: -2px -2px 8px var(--tiktok-cyan), 2px 2px 8px var(--tiktok-magenta);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= ABOUT SECTION (UNIVERSAL STYLES) ================= */
+.about-section {
+    padding: 80px 0;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    padding: 50px;
+    box-sizing: border-box; /* Ensures padding stays internal */
+}
+
+.about-text p {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+/* Live Statistics Layout */
+.stats {
+    display: flex;
+    gap: 60px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 30px;
+}
+
+.stat-box h3 {
+    font-size: 36px;
+    color: var(--primary-color);
+    font-weight: 700;
+    display: inline-block;
+}
+
+.stat-box p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+.about-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    object-fit: cover;
+}
+
+
+/* ================= REFINED RESPONSIVE BREAKPOINTS ================= */
+@media (max-width: 992px) {
+    .hero, .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .services-grid, .deals-grid, .feedback-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Fixed: About Section Content Overflow & Centering */
+    .about-container {
+        grid-template-columns: 1fr; /* Single column stack */
+        padding: 30px 20px;         /* Uniform breathing space */
+        text-align: center;         /* Center aligns all typography */
+        gap: 35px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .about-text p {
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
+
+    /* Stats Mobile Balance */
+    .stats {
+        justify-content: center;    /* Horizontally centers stats container */
+        gap: 40px;                  /* Tighter gap to prevent screen pushing */
+        padding-top: 20px;
+    }
+
+    .stat-box h3 {
+        font-size: 28px;            /* Moderated fluid text size */
+    }
+
+    .about-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 100%;            /* Hard limit to block right corner bleed */
+        min-height: auto;
+        height: 220px;              /* Standard professional vertical bounds */
+    }
+
+    /* Mobile Compact Header Configuration */
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 0;
+    }
+    nav {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        padding: 6px 20px;
+    }
+    nav a {
+        margin: 0;
+        font-size: 14px;
+    }
+    .header-actions {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-top: 2px;
+    }
+    .whatsapp-btn {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+    .header-socials a {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .hero-content h1 {
+        font-size: 34px;
+    }
+    .services-grid, .deals-grid, .feedback-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-images-grid .img-panel {
+        height: 160px;
+    }
+    .panel-1, .panel-2, .panel-3, .panel-4 {
+        transform: none;
+    }
+    .service-img-card {
+        height: 220px;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    /* ---- SERVICES RESPONSIVE ORDER CORRECTION ---- */
+    .services-grid {
+        display: flex;
+        flex-direction: column; /* Stacks everything vertically */
+        gap: 20px;
+    }
+
+    /* Target each child element specifically to rearrange the order */
+    .services-grid > :nth-child(1) { order: 1; } /* Image 1 */
+    .services-grid > :nth-child(4) { order: 2; } /* Description 1 */
+
+    .services-grid > :nth-child(2) { order: 3; } /* Image 2 */
+    .services-grid > :nth-child(5) { order: 4; } /* Description 2 */
+
+    .services-grid > :nth-child(3) { order: 5; } /* Image 3 */
+    .services-grid > :nth-child(6) { order: 6; } /* Description 3 */
+
+
+    /* About Section Content Overflow & Centering (Baqi pehle wala code) */
+    .about-container {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        text-align: center;
+        gap: 35px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .about-text p {
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
+    .stats {
+        justify-content: center;
+        gap: 40px;
+        padding-top: 20px;
+    }
+    .stat-box h3 {
+        font-size: 28px;
+    }
+    .about-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .about-image img {
+        width: 100%;
+        max-width: 100%;
+        height: 220px;
+    }
+
+    /* Mobile Compact Header Configuration */
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 0;
+    }
+    nav {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        padding: 6px 20px;
+    }
+    nav a {
+        margin: 0;
+        font-size: 14px;
+    }
+    .header-actions {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-top: 2px;
+    }
+    .whatsapp-btn {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+    .header-socials a {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .hero-content h1 {
+        font-size: 34px;
+    }
+    
+    /* Deals and Feedback stays standard stack */
+    .deals-grid, .feedback-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-images-grid .img-panel {
+        height: 160px;
+    }
+    .panel-1, .panel-2, .panel-3, .panel-4 {
+        transform: none;
+    }
+    .service-img-card {
+        height: 220px;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    
+    /* ---- HERO CONTENT MOBILE FIXES ---- */
+    .hero-content {
+        padding: 25px 20px; /* Reduced box padding to maximize text area */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero-content h1 {
+        font-size: 28px; /* Slightly scaled down so it fits exactly on 2 lines */
+        line-height: 1.25;
+        margin-bottom: 15px;
+        white-space: normal; /* Permits standard row breaks */
+    }
+
+    .typewriter-desc {
+        width: 100%; /* Forces typewriter box to utilize full available width */
+        max-width: 100%;
+        min-height: auto; /* Removes layout bounding constraints */
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        display: inline; /* Changes container block logic to fill line loops */
+    }
+
+    /* Keep blinking typing cursor properly attached inline */
+    .typewriter-cursor {
+        font-size: 14px;
+        vertical-align: baseline;
+    }
+
+
+    /* ---- SERVICES RESPONSIVE ORDER CORRECTION ---- */
+    .services-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .services-grid > :nth-child(1) { order: 1; }
+    .services-grid > :nth-child(4) { order: 2; }
+    .services-grid > :nth-child(2) { order: 3; }
+    .services-grid > :nth-child(5) { order: 4; }
+    .services-grid > :nth-child(3) { order: 5; }
+    .services-grid > :nth-child(6) { order: 6; }
+
+    /* About Section Content Overflow & Centering */
+    .about-container {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        text-align: center;
+        gap: 35px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .about-text p {
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
+    .stats {
+        justify-content: center;
+        gap: 40px;
+        padding-top: 20px;
+    }
+    .stat-box h3 {
+        font-size: 28px;
+    }
+    .about-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .about-image img {
+        width: 100%;
+        max-width: 100%;
+        height: 220px;
+    }
+
+    /* Mobile Compact Header Configuration */
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 0;
+    }
+    nav {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        padding: 6px 20px;
+    }
+    nav a {
+        margin: 0;
+        font-size: 14px;
+    }
+    .header-actions {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-top: 2px;
+    }
+    .whatsapp-btn {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+    .header-socials a {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .deals-grid, .feedback-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-images-grid .img-panel {
+        height: 160px;
+    }
+    .panel-1, .panel-2, .panel-3, .panel-4 {
+        transform: none;
+    }
+    .service-img-card {
+        height: 220px;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .cta-btn{
+        margin-top: 20px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    /* ---- DEALS CARD IMAGES MOBILE FIX ---- */
+    .deals-grid {
+        grid-template-columns: 1fr; /* Stacks cards in a single clean column */
+        gap: 20px;
+        padding: 0 10px; /* Prevents cards from touching screen edges */
+    }
+
+    .deal-card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden; /* Restricts internal elements from leaking out */
+    }
+
+    .deal-img-wrapper {
+        width: 100%;
+        height: 200px; /* Fluid compact height for mobile screens */
+        overflow: hidden;
+        position: relative;
+    }
+
+    .deal-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* CRITICAL: Fits your horizontal packages perfectly without cropping sides */
+        object-position: center;
+        background-color: #f7f9fa; /* Gives a clean background match if image aspect ratio varies */
+    }
+    
+    .deal-details {
+        padding: 20px 15px; /* Slightly tighter spacing for mobile readability */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ---- BRAND TRUST ROW LOGOS ---- */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Rowdies:wght@700&display=swap');
+
+.brand-trust-container {
+    width: 100%;
+    background: #fdfdfd; /* Clean white/light-grey base for original corporate looks */
+    padding: 20px 0;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.brand-trust-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    width: 90%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.trust-heading {
+    color: #4a5568;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: sans-serif;
+}
+
+.trust-heading i {
+    color: #e53e3e; /* Standard trust alert icon */
+}
+
+.brand-logos-row {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* --- DAHUA ORIGINAL LOGO THEME --- */
+.logo-dahua {
+    display: inline-flex;
+    align-items: baseline;
+    position: relative;
+    font-family: 'Rowdies', 'Arial Black', sans-serif;
+    font-size: 26px;
+    letter-spacing: -0.5px;
+    line-height: 1;
+}
+
+.dahua-d {
+    color: #e53e3e; /* Red D */
+    font-weight: 700;
+}
+
+.dahua-rest {
+    color: #1a202c; /* Black ahua */
+    font-weight: 700;
+}
+
+.logo-subtext {
+    position: absolute;
+    bottom: -10px;
+    right: 2px;
+    font-size: 7px;
+    font-weight: bold;
+    color: #718096;
+    letter-spacing: 1.5px;
+    font-family: sans-serif;
+}
+
+.brand-divider {
+    color: #cbd5e0;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+/* --- HIKVISION ORIGINAL LOGO THEME --- */
+.logo-hikvision {
+    display: inline-flex;
+    font-family: 'Oswald', sans-serif; /* Slanted & compact corporate font */
+    font-size: 25px;
+    font-weight: 700;
+    font-style: italic; /* Signature slanted look */
+    letter-spacing: -0.5px;
+    line-height: 1;
+}
+
+.hik-red {
+    color: #e53e3e; /* Red HIK */
+}
+
+.vision-gray {
+    color: #718096; /* Gray VISION */
+}
+
+/* ---- MOBILE RESPONSIVE OPTIMIZATION ---- */
+@media (max-width: 768px) {
+    .brand-trust-container {
+        padding: 15px 0;
+    }
+    
+    .brand-trust-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .trust-heading {
+        font-size: 13px;
+    }
+    
+    .brand-logos-row {
+        gap: 15px;
+    }
+    
+    .logo-dahua {
+        font-size: 22px;
+    }
+    
+    .logo-hikvision {
+        font-size: 21px;
+    }
+    
+    .brand-divider {
+        font-size: 18px;
+    }
+}

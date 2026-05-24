@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IslamCCTV</title>
+    <link rel="icon" type="image/png" href="Images/logo.jpg.jpg">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+    <div class="container">
+        <!-- <div class=""> -->
+        <header>
+            <div class="logo-wrapper">
+                <div class="dummy-logo">
+                    <!-- <i class="fa-solid fa-shield-halved"></i> -->
+                    <img src="Images/logo.jpg.jpg" alt="">
+                </div>
+                <div class="logo">IslamCCTV</div>
+            </div>
+            <nav>
+                <a id="nav-home" class="nav-link active" onclick="switchTab('home')">Home</a>
+                <a id="nav-deals" class="nav-link" onclick="switchTab('deals')">Deals</a>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="header-socials">
+    <a href="https://www.facebook.com/profile.php?id=61570596729945" target="_blank" class="fb-icon" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/islamcctv1721?igsh=MTdjY3o1MDZqeDNzdg==" target="_blank" class="insta-icon" title="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+</a>
+    <a href="https://www.tiktok.com/@islamcctv?_r=1&_t=ZS-96aAVUXeOFr" target="_blank" class="tiktok-icon" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+</div>
+                <a href="https://wa.me/923172183429?text=Assalam%20U%20Alikum,%20Kindly%20mujhe%20CCTV%20cameras%20ki%20deals%20ki%20list%20share%20krden." target="_blank" class="whatsapp-btn">
+                    <i class="fa-brands fa-whatsapp"></i> +92-3172183429
+                </a>
+            </div>
+        </header>
+    <!-- </div> -->
+
+        <div id="view-home" class="page-view active-view">
+            <section class="hero">
+                <div class="hero-content premium-card">
+                    <h1>Guarding <span>Your World</span><br>Securing <span>Your Mind</span></h1>
+                    <p class="typewriter-desc" id="hero-typing-text"></p>
+                    <br>
+                    <a onclick="switchTab('deals')" class="cta-btn" style="cursor: pointer;">Explore Deals <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="hero-images-grid">
+                    <div class="img-panel panel-1">
+                        <img src="Images/download (1).jfif" alt="Outdoor Bullet Camera">
+                    </div>
+                    <div class="img-panel panel-2">
+                        <img src="Images/download (3).jfif" alt="White Dome Camera">
+                    </div>
+                    <div class="img-panel panel-3">
+                        <img src="Images/download (4).jfif" alt="PTZ Zoom Camera System">
+                    </div>
+                    <div class="img-panel panel-4">
+                        <img src="Images/download (5).jfif" alt="Commercial Surveillance Setup">
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <div class="section-header-wrapper">
+                    <span class="section-tagline">// Who We Are</span>
+                    <h2 class="premium-title">About <span>Us</span></h2>
+                    <div class="title-accent-line"></div>
+                </div>
+                <div class="about-container premium-card">
+                    <div class="about-text">
+                        <p>Welcome to IslamCCTV, your trusted partner for smart security solutions. We deliver professional CCTV installation and expert maintenance services for homes and businesses. Our team ensures continuous 24/7 surveillance, secure network integration, and fast troubleshooting to keep you safe.</p>
+                        <div class="stats">
+                            <div class="stat-box">
+                                <h3 class="counter" data-target="200" data-suffix="+">0</h3>
+                                <p>Active Clients</p>
+                            </div>
+                            <div class="stat-box">
+                                <h3 class="counter" data-target="500" data-suffix="+">0</h3>
+                                <p>Data Assets Secured</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="Images/download (6).jfif" alt="Mobile Authentication Management">
+                    </div>
+                </div>
+            </section>
+
+            <section class="services-section">
+                <div class="section-header-wrapper">
+                    <span class="section-tagline">// Professional Focus</span>
+                    <h2 class="premium-title">Our <span>Services</span></h2>
+                    <div class="title-accent-line"></div>
+                </div>
+                <div class="services-grid">
+                    <div class="service-img-card premium-card">
+                        <img src="Images/download (8).jfif" alt="Dome Security Camera System">
+                    </div>
+                    <div class="service-img-card premium-card">
+                        <img src="Images/download (7).jfif" alt="Enterprise Access Turnstile Setup">
+                    </div>
+                    <div class="service-img-card premium-card">
+                        <img src="Images/download (9).jfif" alt="Security Command Network Operations">
+                    </div>
+
+                    <div class="service-info-card premium-card">
+                        <div class="icon-container">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <h3>CCTV Camera Installation</h3>
+                        <p>Professional CCTV installation by IslamCCTV, delivering expert installations of high-fidelity HD Analog and intelligent IP cameras, crystal-clear night vision analytics for your ultimate security.</p>
+                    </div>
+
+                    <div class="service-info-card premium-card">
+                        <div class="icon-container">
+                            <!-- <i class="fa-solid fa-fingerprint"></i> -->
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h3>System Maintenance</h3>
+                        <p>Expert CCTV maintenance by IslamCCTV, offering quick diagnostics and troubleshooting to keep systems running 24/7.</p>
+                    </div>
+
+                    <div class="service-info-card premium-card">
+                        <div class="icon-container">
+                            <!-- <i class="fa-solid fa-bell"></i> -->
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3>Remote Configuration    </h3>
+                        <p>24/7 live remote monitoring by IslamCCTV, delivering instant alerts and absolute mobile surveillance control anywhere.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="feedback-section">
+                <div class="section-header-wrapper">
+                    <span class="section-tagline">// Client Success</span>
+                    <h2 class="premium-title">Customer <span>Feedbacks</span></h2>
+                    <div class="title-accent-line"></div>
+                </div>
+                <div class="feedback-grid">
+                    <div class="feedback-card premium-card">
+                        <div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="feedback-text">"Islam CCTV, best for security solutions!"</p>
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">AH</div>
+                            <div class="client-meta">
+                                <h4>Asif Khan</h4>
+                                <p>Warehouse Director</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feedback-card premium-card">
+                        <div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="feedback-text">"Hamne 4 cameras ki deals lagwai ha bht munasib peson main professional installation ki ha."</p>
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">SM</div>
+                            <div class="client-meta">
+                                <h4>Sarah Malik</h4>
+                                <p>HR Operations Head</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feedback-card premium-card">
+                        <div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="feedback-text">"MASHA ALLAH Azeem apne bohat professional andaz me, bohat kam time me or bohat munasib paison me kaam kiya..  👍🏻😊 JAZAKALLAH"</p>
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">ZR</div>
+                            <div class="client-meta">
+                                <h4>Zain Raza</h4>
+                                <p>House Owner</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feedback-card premium-card">
+                        <div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="feedback-text">"Hamne 2 3 martaba service krwai thi lekin faida nhi hoa, islamcctv ne first time main best kaam kr k diya ha. Thank you Azeem!"</p>
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">FA</div>
+                            <div class="client-meta">
+                                <h4>Faisal Ahmed</h4>
+                                <p>Office Administrator</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feedback-card premium-card">
+                        <div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="feedback-text">"Hamara online system ka masla bht resonable price main solve hogaya. Best of luck for "IslamCCTV" "</p>
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">TN</div>
+                            <div class="client-meta">
+                                <h4>Tariq Naeem</h4>
+                                <p>House Owner</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feedback-card premium-card">
+                        <div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="feedback-text">"Mene inse 5th side pe kam krwaya ha or alhamdulillah bht munasib prices k sath professional kam krte hain ye log."</p>
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">BS</div>
+                            <div class="client-meta">
+                                <h4>Bilal Siddiqui</h4>
+                                <p>State Agency Dealer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <div id="view-deals" class="page-view">
+            <section class="deals-section">
+                <div class="section-header-wrapper">
+                    <span class="section-tagline">// Limited Time Offers</span>
+                    <h2 class="premium-title">Exclusive <span>Surveillance Deals</span></h2>
+                    <div class="title-accent-line"></div>
+                </div>
+                
+                <div class="deals-grid">
+                    <div class="deal-card">
+                        <div class="deal-img-wrapper">
+                            <img src="Images/color deal.jpg" alt="Deal 1">
+                        </div>
+                        <div class="deal-details">
+                            <span class="deal-tag">SPECIAL ANALOG DEAL</span>
+                            <h3>4-ColorFull Cameras Analog System</h3>
+                            <p>
+                                4-channel DVR (HikVision)<br> 
+                                4 HD Waterproof Cameras <br> (Colorful + Two Way talk) <br> 
+                                500GB Hard Drive <br> 
+                                Adapters And Connectors <br> 
+                                Wire Upto 50ft <br> 
+                                Installation And Remote Configuration</p>
+                            <div class="deal-footer">
+                                <span class="deal-price">Rs 52,000 </span>
+                                <a href="https://wa.me/923172183429?text=Assalam%20U%20Alikum,%20please%20share%20details%20of%20this%20colorful%20cameras%20deal." target="_blank" class="deal-action-wa">
+                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="deal-card">
+                        <div class="deal-img-wrapper">
+                            <img src="Images/analog deal 1.jpg" alt="Deal 2">
+                        </div>
+                        <div class="deal-details">
+                            <span class="deal-tag">DEAL 1 | HD CAMERAS</span>
+                            <h3>2-Cameras Analog System</h3>
+                            <p>4-Channel DVR <br> 
+                                2 HD Waterproof Cameras <br> 
+                                500GB Hard Drive <br> 
+                                Adapters And Connectors <br> 
+                                Wire Upto 30ft <br> 
+                                Installation And Remote Configuration</p>
+                            <div class="deal-footer">
+                                <span class="deal-price">Rs 30,000</span>
+                                <a href="https://wa.me/923172183429?text=Assalam%20U%20Alikum,%20Please%20share%20details%20of%202-HD-cameras%20deal." target="_blank" class="deal-action-wa">
+                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="deal-card">
+                        <div class="deal-img-wrapper">
+                            <img src="Images/analog deal 2.jpg" alt="Deal 3">
+                        </div>
+                        <div class="deal-details">
+                            <span class="deal-tag">DEAL 2 | HD CAMERAS</span>
+                            <h3>4-Cameras Analog System</h3>
+                            <p>4-Channel DVR <br> 
+                                4 HD Waterproof Cameras <br> 
+                                500GB Hard Drive <br> 
+                                Adapters And Connectors <br> 
+                                Wire Upto 50ft <br> 
+                                Installation And Remote Configuration</p>
+                            <div class="deal-footer">
+                                <span class="deal-price">Rs 40,000</span>
+                                <a href="https://wa.me/923172183429?text=Assalam%20U%20Alikum,%20Please%20share%20details%20of%204-HD-cameras%20deal." target="_blank" class="deal-action-wa">
+                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="deal-card">
+                        <div class="deal-img-wrapper">
+                            <img src="Images/analog deal 3.jpg" alt="Deal 4">
+                        </div>
+                        <div class="deal-details">
+                            <span class="deal-tag">DEAL 3 | HD CAMERAS</span>
+                            <h3>6-Cameras Analog System</h3>
+                            <p>8-Channel DVR <br> 
+                                6 HD Waterproof Cameras <br> 
+                                500GB Hard Drive <br> 
+                                Adapters And Connectors <br> 
+                                Wire Upto 150ft <br> 
+                                Installation And Remote Configuration</p>
+                            <div class="deal-footer">
+                                <span class="deal-price">Rs 60,000</span>
+                                <a href="https://wa.me/923172183429?text=Assalam%20U%20Alikum,%20Please%20share%20details%20of%206-HD-cameras%20deal." target="_blank" class="deal-action-wa">
+                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="deal-card">
+                        <div class="deal-img-wrapper">
+                            <img src="Images/analog deal 4.jpg" alt="Deal 5">
+                        </div>
+                        <div class="deal-details">
+                            <span class="deal-tag">DEAL 4 | HD CAMERAS</span>
+                            <h3>8-Cameras Analog System</h3>
+                            <p>8-Channel DVR <br> 
+                                8 HD Waterproof Cameras <br> 
+                                500GB Hard Drive <br> 
+                                Adapters And Connectors <br> 
+                                Wire Upto 250ft <br> 
+                                Installation And Remote Configuration</p>
+                            <div class="deal-footer">
+                                <span class="deal-price">Rs 72,000</span>
+                                <a href="https://wa.me/923172183429?text=Assalam%20U%20Alikum,%20Please%20share%20details%20of%208-HD-cameras%20deal." target="_blank" class="deal-action-wa">
+                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="deal-card">
+                        <div class="deal-img-wrapper">
+                            <img src="Images/ip deal 1.jpg" alt="Deal 6">
+                        </div>
+                        <div class="deal-details">
+                            <span class="deal-tag">DEAL 1 | IP CAMERAS</span>
+                            <h3>2-Cameras IP System</h3>
+                            <p>4-Channel NVR <br> 
+                                2 IP Network Waterproof Cameras <br> 
+                                500GB Hard Drive <br> 
+                                4 Port POE Switch <br> 
+                                Wire Upto 50ft <br> 
+                                Installation And Remote Configuration</p>
+                            <div class="deal-footer">
+                                <span class="deal-price">Rs 60,000</span>
+                                <a href="https://wa.me/923172183429?text=Assalam%20U%20Alikum,%20Please%20share%20details%20of%202-IP-cameras%20deal." target="_blank" class="deal-action-wa">
+                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="deal-card">
+                        <div class="deal-img-wrapper">
+                            <img src="Images/ip deal 2.jpg" alt="Deal 7">
+                        </div>
+                        <div class="deal-details">
+                            <span class="deal-tag">DEAL 2 | IP CAMERAS</span>
+                            <h3>4-Cameras IP System</h3>
+                            <p>4-Channel NVR <br> 
+                                4 IP Network Waterproof Cameras <br> 
+                                500GB Hard Drive <br> 
+                                4 Port POE Switch <br> 
+                                Wire Upto 100ft <br> 
+                                Installation And Remote Configurationp </p>
+                            <div class="deal-footer">
+                                <span class="deal-price">Rs 85,000</span>
+                                <a href="https://wa.me/923172183429?text=Assalam%20U%20Alikum,%20Please%20share%20details%20of%204-IP-cameras%20deal." target="_blank" class="deal-action-wa">
+                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="deal-card">
+                        <div class="deal-img-wrapper">
+                            <img src="Images/ip deal 3.jpg" alt="Deal 8">
+                        </div>
+                        <div class="deal-details">
+                            <span class="deal-tag">DEAL 3 | IP CAMERAS</span>
+                            <h3>6-Cameras IP System</h3>
+                            <p>8-Channel NVR <br> 
+                                6 IP Network Waterproof Cameras <br> 
+                                1000GB Hard Drive <br> 
+                                8 Port POE Switch <br> 
+                                Wire Upto 150ft <br> 
+                                Installation And Remote Configuration</p>
+                            <div class="deal-footer">
+                                <span class="deal-price">Rs 125,000</span>
+                                <a href="https://wa.me/923172183429?text=Assalam%20U%20Alikum,%20Please%20share%20details%20of%206-IP-cameras%20deal." target="_blank" class="deal-action-wa">
+                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="deal-card">
+                        <div class="deal-img-wrapper">
+                            <img src="Images/ip deal 4.jpg" alt="Deal 9">
+                        </div>
+                        <div class="deal-details">
+                            <span class="deal-tag">DEAL 4 | IP CAMERAS</span>
+                            <h3>8-Cameras IP System</h3>
+                            <p>8-Channel NVR <br> 
+                                8 IP Network Waterproof Cameras <br> 
+                                1000GB Hard Drive <br> 
+                                8 Port POE Switch <br> 
+                                Wire Upto 250ft <br> 
+                                Installation And Remote Configuration</p>
+                            <div class="deal-footer">
+                                <span class="deal-price">Rs 150,000</span>
+                                <a href="https://wa.me/923172183429?text=Assalam%20U%20Alikum,%20Please%20share%20details%20of%208-IP-cameras%20deal." target="_blank" class="deal-action-wa">
+                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="logo-wrapper" style="margin-bottom: 15px;">
+                            <div class="dummy-logo footer-logo" style="">
+                                <!-- <i class="fa-solid fa-shield-halved"></i> -->
+                                <img src="Images/logo.jpg.jpg" alt="">
+                            </div>
+                            <div class="logo footer-logo" style="color: #ffffff;">IslamCCTV</div>
+                        </div>
+                        <p>IslamCCTV | The Name of Trust
+Securing what matters most. We deliver premier CCTV installation, proactive maintenance, and smart remote configuration services.</p>
+                        <div class="footer-socials">
+    <a href="https://www.facebook.com/profile.php?id=61570596729945" target="_blank" class="fb-icon"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/islamcctv1721?igsh=MTdjY3o1MDZqeDNzdg==" target="_blank" class="insta-icon"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@islamcctv?_r=1&_t=ZS-96aAVUXeOFr" target="_blank" class="tiktok-icon"><i class="fa-brands fa-tiktok"></i></a>
+</div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Quick Navigation</h4>
+                        <ul class="footer-links">
+                            <li><a onclick="switchTab('home')">Home Dashboard</a></li>
+                            <li><a onclick="switchTab('deals')">Exclusive Deals</a></li>
+                            <li><a onclick="switchTab('home'); setTimeout(() => window.scrollTo({top: document.querySelector('.services-section').offsetTop - 100, behavior: 'smooth'}), 100)">Our Services</a></li>
+                            <li><a onclick="switchTab('home'); setTimeout(() => window.scrollTo({top: document.querySelector('.feedback-section').offsetTop - 100, behavior: 'smooth'}), 100)">Client Reviews</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Operational Hours</h4>
+                        <ul class="footer-links" style="color: rgba(255, 255, 255, 0.7);">
+                            <li style="margin-bottom: 10px;">Monday - Friday:<br><span style="color: #ffffff; font-weight: 500;">9:00 AM - 9:00 PM</span></li>
+                            <li>Saturday:<br><span style="color: #ffffff; font-weight: 500;">10:00 AM - 6:00 PM</span></li>
+                            <li style="margin-top: 10px; font-size: 12px; color: var(--accent-color);">Sunday: Closed (Emergency Only)</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Connect With Us</h4>
+                        <div class="footer-meta-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+92-3172183429</span>
+                        </div>
+                        <div class="footer-meta-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>azeemislam79@gmail.com</span>
+                        </div>
+                        <div class="footer-meta-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Karachi, Sindh, Pakistan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 IslamCCTV. All rights reserved.</p>
+                    <p>Engineered for High-Fidelity Enterprise Security Infrastructure.</p>
+                </div>
+            </div>
+        </footer>
+    </div>    
+
+
+
+
+
+
+
+    
+
+<div class="brand-trust-container">
+    <div class="brand-trust-content">
+        <span class="trust-heading">
+            <i class="fa-solid fa-circle-check"></i> Trusted Company By
+        </span>
+        <div class="brand-logos-row">
+            <div class="logo-dahua">
+                <span class="dahua-d">d</span><span class="dahua-rest">ahua</span>
+                <span class="logo-subtext">TECHNOLOGY</span>
+            </div>
+            
+            <span class="brand-divider">|</span>
+            
+            <div class="logo-hikvision">
+                <span class="hik-red">HIK</span><span class="vision-gray">VISION</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
